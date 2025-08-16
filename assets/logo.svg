@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">VoxelForge 3D</title>
+  <desc id="logoDesc">Logotipo minimalista con un cubo isométrico y texto VoxelForge 3D</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(6,4)">
+    <g transform="translate(0,2) scale(0.9)">
+      <polygon points="10,0 26,8 26,24 10,16" fill="url(#g)"/>
+      <polygon points="10,0 26,8 42,0 26,-8" fill="#06B6D4" opacity="0.9"/>
+      <polygon points="26,8 42,0 42,16 26,24" fill="#6D28D9" opacity="0.9"/>
+    </g>
+    <text x="56" y="22" font-family="Inter, Poppins, Arial, sans-serif" font-size="20" font-weight="700" fill="#F1F5F9">VoxelForge</text>
+    <text x="160" y="22" font-family="Inter, Poppins, Arial, sans-serif" font-size="14" font-weight="600" fill="#06B6D4">3D</text>
+  </g>
+</svg>

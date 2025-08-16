@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Favicon VoxelForge 3D">
+  <rect width="32" height="32" rx="6" fill="#0F172A"/>
+  <path d="M8 10l8 4v10l-8-4V10z" fill="#06B6D4"/>
+  <path d="M16 14l8-4v10l-8 4V14z" fill="#6D28D9"/>
+</svg>
