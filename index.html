@@ -128,44 +128,75 @@
 </div>
 </section>
 <!-- PLANES -->
-<section aria-label="Precios y planes" class="section" id="planes">
-<div class="container">
-<h2 class="section-title">Precios / Planes</h2>
-<p class="note" role="note">*Precios referenciales y ficticios para demostración.</p>
-<div class="pricing">
-<article class="tier">
-<h3>Básico</h3>
-<p class="price">$499 MXN</p>
-<ul>
-<li>Impresión FDM estándar</li>
-<li>Material PLA (1 color)</li>
-<li>Tiempo de entrega regular</li>
-</ul>
-<a class="btn btn-outline" href="#contacto">Elegir</a>
-</article>
-<article class="tier featured">
-<h3>Pro</h3>
-<p class="price">$1,299 MXN</p>
-<ul>
-<li>FDM calidad fina o Resina</li>
-<li>2 colores/materiales</li>
-<li>Prioridad de producción</li>
-</ul>
-<a class="btn btn-primary" href="#contacto">Elegir</a>
-</article>
-<article class="tier">
-<h3>Premium</h3>
-<p class="price">$2,499 MXN</p>
-<ul>
-<li>FDM + Resina combinados</li>
-<li>Acabado y pintura básica</li>
-<li>Asesoría CAD incluida</li>
-</ul>
-<a class="btn btn-outline" href="#contacto">Elegir</a>
-</article>
-</div>
-</div>
+
+<!-- CALCULADORA DE PRECIO (APROXIMADO) -->
+<section aria-label="Calculadora" class="section" id="cotizador">
+  <div class="container">
+    <h2 class="section-title">Calculadora de precio — <span class="muted">aproximado</span></h2>
+    <p class="muted">Esta estimación es sólo informativa. El precio final puede variar tras revisar tu modelo 3D (geometría, soportes y acabados).</p>
+
+    <div class="calc-grid">
+      <form id="calc-form" class="card">
+        <h3 class="card-title">Parámetros de impresión</h3>
+
+        <label class="field">
+          <span>Material</span>
+          <select id="material">
+            <option value="PLA" data-cost="0.32">PLA (estándar)</option>
+            <option value="PETG" data-cost="0.42">PETG (resistente)</option>
+            <option value="ABS" data-cost="0.45">ABS (técnico)</option>
+            <option value="RESINA" data-cost="0.95">Resina (alta definición)</option>
+          </select>
+          <small class="hint">Costo materia prima aprox. por gramo</small>
+        </label>
+
+        <label class="field">
+          <span>Peso estimado del modelo (g)</span>
+          <input type="number" id="peso" min="1" value="80" step="1" />
+          <small class="hint">Si no lo sabes, usa 50–200 g como rango típico.</small>
+        </label>
+
+        <label class="field">
+          <span>Relleno (infill)</span>
+          <input type="range" id="infill" min="0" max="100" value="20" />
+          <div class="range-readout"><span id="infill-val">20</span>%</div>
+        </label>
+
+        <label class="field">
+          <span>Calidad (altura de capa)</span>
+          <input type="range" id="calidad" min="0" max="2" value="1" />
+          <div class="range-legend">
+            <span>Rápida</span><span>Estándar</span><span>Fina</span>
+          </div>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" id="soportes" /> ¿Requiere soportes?
+        </label>
+
+        <label class="check">
+          <input type="checkbox" id="acabado" /> ¿Acabado y pintura básica?
+        </label>
+      </form>
+
+      <aside class="card results">
+        <h3 class="card-title">Resultado</h3>
+        <div class="price-big"><span id="precio">$0</span> MXN</div>
+        <ul class="price-breakdown">
+          <li>Material: <strong id="bd-material">$0</strong></li>
+          <li>Tiempo de máquina: <strong id="bd-tiempo">$0</strong></li>
+          <li>Soportes: <strong id="bd-soportes">$0</strong></li>
+          <li>Acabados: <strong id="bd-acabado">$0</strong></li>
+        </ul>
+        <p class="muted xs">* Estimación no vinculante. Para una cotización exacta, compártenos tu archivo (.stl/.3mf/.step) por WhatsApp o correo.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contacto">Solicitar cotización formal</a>
+        </div>
+      </aside>
+    </div>
+  </div>
 </section>
+
 <!-- MATERIALES -->
 <section aria-label="Materiales" class="section" id="materiales">
 <div class="container">
